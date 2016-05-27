@@ -1,0 +1,112 @@
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+on_if = 1
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+depends = 'context_filetype.vim'
+if = "has('lua')"
+on_event = 'InsertEnter'
+hook_source = '''
+  let g:neocomplete#enable_at_startup = 1
+  source ~/.vim/rc/plugins/neocomplete.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+depends = 'neomru.vim'
+hook_add = '''
+  nnoremap <silent> ,uo
+        \ :<C-u>Unite outline -no-start-insert -resume<CR>
+
+  nnoremap <silent> ,um
+        \ :<C-u>Unite -buffer-name=files -no-split -multi-line -unique -silent
+        \ file_mru<CR>
+  nnoremap <silent> ,uft
+        \ :<C-u>Unite -start-insert filetype filetype/new<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'Shougo/unite-outline'
+on_source = 'unite.vim'
+
+[[plugins]]
+repo = 'Shougo/vinarise.vim'
+on_cmd = 'Vinarise'
+hook_add = 'let g:vinarise_enable_auto_detect = 1'
+
+[[plugins]]
+repo = 'vim-jp/vital.vim'
+
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+on_map = [['n', '<Plug>']]
+hook_add = 'nmap <silent> \r <Plug>(quickrun)'
+hook_source = '''
+  source ~/.vim/rc/plugins/quickrun.rc.vim
+'''
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+
+[[plugins]]
+repo = 'todesking/ruby_hl_lvar.vim'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'kana/vim-operator-replace'
+depends = 'vim-operator-user'
+on_map = [['nx', '<Plug>']]
+hook_add = 'xmap p <Plug>(operator-replace)'
+
+[[plugins]]
+repo = 'rhysd/vim-operator-surround'
+depends = 'vim-operator-user'
+on_map = [['n', '<Plug>']]
+hook_add = '''
+  nmap <silent>sa <Plug>(operator-surround-append)a
+  nmap <silent>sd <Plug>(operator-surround-delete)a
+  nmap <silent>sr <Plug>(operator-surround-replace)a
+  nmap <silent>sc <Plug>(operator-surround-replace)a
+'''
+
+[[plugins]]
+repo = 'osyo-manga/vim-jplus'
+on_map = [['n', '<Plug>']]
+hook_add = '''
+  nmap J <Plug>(jplus)
+'''
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+if = "!has('nvim')"
+on_ft = 'python'
+hook_source = '''
+  let g:jedi#completions_enabled = 0
+  let g:jedi#auto_vim_configuration = 0
+  let g:jedi#smart_auto_mappings = 0
+  let g:jedi#show_call_signatures = 0
+'''
+
+[[plugins]]
+repo = 'racer-rust/vim-racer'
+on_ft = 'rust'
+hook_source = '''
+  let g:racer_experimental_completer = 1
+'''
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+
+[[plugins]]
+repo = 'rhysd/rust-doc.vim'
+on_ft = 'rust'
+
