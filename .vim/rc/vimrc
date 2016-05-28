@@ -89,7 +89,3 @@ function! s:my_on_filetype() abort "{{{
     filetype detect
   endif
 endfunction "}}}
-
-set hidden
-let g:racer_cmd = 'd:/bin/racer.exe'
-let $RUST_SRC_PATH="D:/tools/lang/rust/rustc-1.8.0/src"
