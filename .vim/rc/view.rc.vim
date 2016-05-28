@@ -11,11 +11,7 @@ set number
 
 " Show whitespaces
 set list
-if IsWindows()
-   set listchars=tab:^.,trail:.,extends:>,precedes:<
-else
-   set listchars=tab:?\ ,trail:.,extends:â,precedes:á,nbsp:%
-endif
+set listchars=tab:^.,trail:.,extends:>,precedes:<
 
 " Always display statusline.
 set laststatus=2
