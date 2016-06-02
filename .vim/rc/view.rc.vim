@@ -58,6 +58,9 @@ set display=lastline
 " Display an invisible letter with hex format.
 "set display+=uhex
 
+" Don't wrap scan
+set nowrapscan
+
 function! s:strwidthpart(str, width) abort "{{{
   if a:width <= 0
     return ''
