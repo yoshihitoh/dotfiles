@@ -89,3 +89,13 @@ function! s:my_on_filetype() abort "{{{
     filetype detect
   endif
 endfunction "}}}
+
+"
+" Platform:
+"---------------------------------------------------------------------------
+"
+
+if IsWindows()
+  call s:source_rc('windows.rc.vim')
+endif
+
