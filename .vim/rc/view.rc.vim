@@ -61,6 +61,9 @@ set display=lastline
 " Don't wrap scan
 set nowrapscan
 
+" Disable folding
+set nofoldenable
+
 function! s:strwidthpart(str, width) abort "{{{
   if a:width <= 0
     return ''
