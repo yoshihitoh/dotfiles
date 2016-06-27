@@ -77,6 +77,7 @@ call s:source_rc('edit.rc.vim')
 call s:source_rc('view.rc.vim')
 
 
+"
 " FileType:
 "---------------------------------------------------------------------------
 "
@@ -97,6 +98,14 @@ function! s:my_on_filetype() abort "{{{
     filetype detect
   endif
 endfunction "}}}
+
+"
+" Mappings:
+"---------------------------------------------------------------------------
+"
+
+call s:source_rc('mappings.rc.vim')
+
 
 "
 " Platform:
