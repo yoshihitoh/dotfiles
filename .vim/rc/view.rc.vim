@@ -95,3 +95,12 @@ else
   endfunction
 endif
 
+
+" Set background
+if !has('gui_running')
+    set background=dark
+    color desert
+else
+    set background=light
+    color evening
+endif
