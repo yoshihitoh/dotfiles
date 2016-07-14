@@ -22,6 +22,11 @@ hook_add = '''
   nnoremap <silent> ,um
         \ :<C-u>Unite -buffer-name=files -no-split -multi-line -unique -silent
         \ file_mru<CR>
+
+  nnoremap <silent> ,ub
+        \ :<C-u>Unite -buffer-name=buffers -no-split -multi-line -unique -silent
+        \ buffer<CR>
+
   nnoremap <silent> ,uft
         \ :<C-u>Unite -start-insert filetype filetype/new<CR>
 '''
