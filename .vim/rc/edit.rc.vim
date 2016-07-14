@@ -7,6 +7,7 @@ set autoindent smartindent
 set modeline
 
 set sw=4 ts=4 sts=4
+set scrolloff=5
 
 " highlight
 set showmatch
