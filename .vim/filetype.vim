@@ -28,4 +28,7 @@ augroup filetypedetect
   " groovy
   autocmd BufRead,BufNewFile *.gvy set ft=groovy syntax=groovy
 
+  " xaml
+  autocmd BufRead,BufNewFile *.xaml set ft=xaml syntax=xml
+
 augroup END
