@@ -4,3 +4,5 @@ setlocal textwidth=80
 setlocal smarttab
 setlocal expandtab
 setlocal nosmartindent
+setlocal cindent
+setlocal cinoptions=g-1
