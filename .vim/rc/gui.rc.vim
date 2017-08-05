@@ -7,7 +7,10 @@ set ambiwidth=double
 if has('win32') || has('win64')
     set guifont=Ricty_Diminished_Discord:h12:cSHIFTJIS
     set guifontwide=Ricty_Diminished_Discord:h12:cSHIFTJIS
-endif"}}}
+else
+    set guifont=SourceCodePro-Medium:h12
+endif
+
 "}}}
 
 
