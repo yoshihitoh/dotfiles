@@ -16,6 +16,10 @@ set cpoptions-=m
 set matchtime=1
 set matchpairs+=<:>
 
+" search
+set ignorecase
+set smartcase
+
 " Ignore case on insert completion.
 set infercase
 
