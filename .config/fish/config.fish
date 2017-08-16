@@ -17,12 +17,6 @@ rbenv init - | source
 #------------------------------------------------------------------------------
 . (pyenv init - | psub)
 
-# peco
-#------------------------------------------------------------------------------
-function fish_user_key_bindings
-    bind \cr peco_select_history
-end
-
 # android sdk
 #------------------------------------------------------------------------------
 set ANDROID_SDK $HOME/Library/Android/sdk
