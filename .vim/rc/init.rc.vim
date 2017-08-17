@@ -36,3 +36,6 @@ if s:dein_dir != '' || &runtimepath !~ '/dein.vim'
 
   " execute ' set runtimepath^=' . s:dein_dir
 endif
+
+" Set Leader
+let mapleader = "\<Space>"
