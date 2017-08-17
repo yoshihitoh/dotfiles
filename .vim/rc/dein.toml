@@ -16,6 +16,28 @@ repo = 'osyo-manga/unite-filetype'
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
+repo = 'Lokaltog/vim-easymotion'
+hook_add = '''
+  nmap <silent> <Leader>s <Plug>(easymotion-prefix)
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --bin'
+merged = '0'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+hook_add = '''
+    let g:fzf_launcher = "$HOME/.vim/rc/scripts/open_iterm2.fish"
+    command! -bang -nargs=* Rg
+    \ call fzf#vim#grep(
+    \   'rg --line-number --no-heading '.shellescape(<q-args>), 0,
+    \   fzf#vim#with_preview({'options': '--exact --reverse'}, 'right:50%:wrap'))
+'''
+
+[[plugins]]
 repo = 'udalov/kotlin-vim'
 on_ft = 'kotlin'
 
