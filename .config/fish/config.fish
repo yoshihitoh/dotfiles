@@ -11,6 +11,10 @@ set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
 set -x FZF_LEGACY_KEYBINDINGS 0
 set -x FXF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
 
+# direnv
+#------------------------------------------------------------------------------
+eval (direnv hook fish)
+
 # rust
 #------------------------------------------------------------------------------
 set -x PATH $HOME/bin $HOME/.cargo/bin $PATH
