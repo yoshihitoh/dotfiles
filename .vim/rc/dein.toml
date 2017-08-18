@@ -39,6 +39,9 @@ hook_add = '''
   map z? <Plug>(incsearch-easymotion-?)
   map zg/ <Plug>(incsearch-easymotion-stay)
 '''
+hook_source = '''
+  source ~/.vim/rc/plugins/easymotion.rc.vim
+'''
 
 [[plugins]]
 repo = 'junegunn/fzf'
