@@ -52,6 +52,10 @@ merged = '0'
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
+    nmap <Leader>f [Fzf]
+    nnoremap [Fzf]f :<C-u>Files<CR>
+    nnoremap [Fzf]g :<C-u>GFiles<CR>
+    nnoremap [Fzf]b :<C-u>Buffers<CR>
     let g:fzf_launcher = "$HOME/.vim/rc/scripts/open_iterm2.fish"
     command! -bang -nargs=* Rg
     \ call fzf#vim#grep(
