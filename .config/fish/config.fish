@@ -1,9 +1,16 @@
+# alias
+#------------------------------------------------------------------------------
+alias ldd='otool -L'
 
 # theme
 #------------------------------------------------------------------------------
 set -g fish_theme agnoster
 # set -g fish_theme bobthefish
 # set -g theme_color_scheme solarized-light
+
+# fish-plugins
+#------------------------------------------------------------------------------
+set fish_plugins theme git rbenv rails brew bundler gem osx pbcopy z tmux
 
 # fzf
 #------------------------------------------------------------------------------
@@ -18,7 +25,7 @@ eval (direnv hook fish)
 # rust
 #------------------------------------------------------------------------------
 set -x PATH $HOME/bin $HOME/.cargo/bin $PATH
-set -x RUST_SRC_PATH $HOME/workspace/tools/lang/rust/rustc-1.19.0-src/src
+set -x RUST_SRC_PATH $HOME/workspace/tools/lang/rust/rustc-1.20.0-src/src
 
 # python
 #------------------------------------------------------------------------------
@@ -41,7 +48,6 @@ set -x PATH $ANDROID_SDK/tools $ANDROID_SDK/platform-tools $PATH
 #------------------------------------------------------------------------------
 set -x EMSDK $HOME/workspace/tools/emscripten/emsdk-portable
 set -x EMSCRIPTEN = $EMSDK/emscripten/1.37.16
-set -x PATH $EMSDK $PATH
 set -x PATH $EMSCRIPTEN $PATH
 set -x EM_CONFIG $HOME/.emscripten
 set -x BINARYEN_ROOT = $EMSDK/clang/e1.37.16_64bit/binaryen
