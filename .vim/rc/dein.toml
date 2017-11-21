@@ -1,4 +1,10 @@
 [[plugins]]
+repo = 'vim-scripts/twilight256.vim'
+hook_add = '''
+  colorscheme twilight256
+'''
+
+[[plugins]]
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
