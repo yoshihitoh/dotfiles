@@ -1,0 +1,12 @@
+[core]
+	editor = vim
+
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ad = add
+	ap = add
+
+[merge]
+	tool = vimdiff
