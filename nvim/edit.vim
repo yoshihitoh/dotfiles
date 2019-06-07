@@ -1,6 +1,9 @@
-" Edit:
-"-------------------------------------------------------------------------------
+"
+" Edit settings
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" indent
 set smarttab
 set expandtab
 set autoindent smartindent
@@ -29,9 +32,6 @@ if v:version >= 703
   set undofile
   let &g:undodir=&directory
 endif
-
-" Update diff
-autocmd MyAutoCmd InsertLeave * if &l:diff | diffupdate | endif
 
 " Don't create backup.
 set nowritebackup

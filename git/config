@@ -1,0 +1,3 @@
+[include]
+	path = yoshihitoh/config.common
+	path = yoshihitoh/config.os

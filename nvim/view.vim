@@ -1,10 +1,7 @@
-" View:
-"-------------------------------------------------------------------------------
-
-" Anywhere SID.
-function! s:SID_PREFIX() abort
-  return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
-endfunction
+"
+" View settings
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Show line number
 set number
@@ -15,21 +12,14 @@ set listchars=tab:^.,trail:.,extends:>,precedes:<
 
 " Always display statusline.
 set laststatus=2
+" Show full path on statusline.
+set statusline+=%F
 " Height of command line.
 set cmdheight=2
 " Not show command on statusline.
 set noshowcmd
 " Show title.
 set title
-" Title length.
-set titlelen=95
-" Title string.
-let &g:titlestring="
-      \ %{expand('%:p:~:.')}%(%m%r%w%)
-      \ %<\(%{".s:SID_PREFIX()."strwidthpart(
-      \ fnamemodify(&filetype ==# 'vimfiler' ?
-      \ substitute(b:vimfiler.current_dir, '.\\zs/$', '', '') : getcwd(), ':~'),
-      \ &columns-len(expand('%:p:.:~')))}\) - VIM"
 " Disable tabline.
 set showtabline=0
 
@@ -64,37 +54,10 @@ set nowrapscan
 " Disable folding
 set nofoldenable
 
-function! s:strwidthpart(str, width) abort "{{{
-  if a:width <= 0
-    return ''
-  endif
-  let ret = a:str
-  let width = s:wcswidth(a:str)
-  while width > a:width
-    let char = matchstr(ret, '.$')
-    let ret = ret[: -1 - len(char)]
-    let width -= s:wcswidth(char)
-  endwhile
+" For conceal.
+set conceallevel=2 concealcursor=niv
 
-  return ret
-endfunction"}}}
-
-if v:version >= 703
-  " For conceal.
-   set conceallevel=2 concealcursor=niv
-
-   set colorcolumn=79
-
-  " Use builtin function.
-  function! s:wcswidth(str) abort
-    return strwidth(a:str)
-  endfunction
-else
-  function! s:wcswidth(str) abort
-    return len(a:str)
-  endfunction
-endif
-
+set colorcolumn=80
 
 " Set background
 if !has('gui_running')
@@ -104,3 +67,4 @@ else
     set background=light
     color evening
 endif
+
