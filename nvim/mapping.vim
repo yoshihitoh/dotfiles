@@ -1,5 +1,5 @@
 " leader key
-let mapleader="\<Space>"
+let g:mapleader="\<Space>"
 
 " utilities
 nnoremap <silent> <Leader>cd :<C-u>call <SID>cd_buffer_dir()<CR>

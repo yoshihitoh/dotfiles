@@ -25,8 +25,11 @@ function! s:source_rc(path, ...) abort
   endtry
 endfunction
 
+" load
 call s:source_rc('dein.vim')
-call s:source_rc('denite.vim')
 call s:source_rc('edit.vim')
 call s:source_rc('view.vim')
 call s:source_rc('mapping.vim')
+
+" cache
+let g:netrw_home=$XDG_CACHE_HOME.'/nvim'

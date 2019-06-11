@@ -1,11 +1,14 @@
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
+function! s:config_path(path) abort
+  let abspath = resolve(expand('~/.config/nvim/' . a:path))
+endfunction
+
+let s:toml_path = resolve(expand('~/.config/nvim/' . 'dein.toml'))
 if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
 
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim')
-  call dein#add('Shougo/denite.nvim')
+  call dein#load_toml(s:toml_path, {'lazy': 0})
 
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
