@@ -33,3 +33,6 @@ call s:source_rc('mapping.vim')
 
 " cache
 let g:netrw_home=$XDG_CACHE_HOME.'/nvim'
+
+" runtiempath
+set rtp+=/usr/local/opt/fzf
