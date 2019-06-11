@@ -12,3 +12,6 @@ nodenv init - | source
 rbenv init - | source
 pyenv init - | source
 direnv hook fish | source
+
+# enable local tools
+set -gx PATH $HOME/bin $PATH
