@@ -1,0 +1,24 @@
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+set showmatch matchtime=1
+set cmdheight=2
+set laststatus=2
+set showcmd
+
+let mapleader = " "
+
+" Build
+nnoremap <Leader>bc :action CompileDirty<CR>
+nnoremap <Leader>bd :action Debug<CR>
+nnoremap <Leader>br :action Run<CR>
+
+" Refactoring
+nnoremap <Leader>rf :action FindUsages<CR>
+nnoremap <Leader>rn :action RenameElement<CR>
+
+" Git
+nnoremap <Leader>ga :action Annotate<CR>
+
