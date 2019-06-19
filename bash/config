@@ -1,0 +1,27 @@
+short_pwd() {
+  local pwd=$(pwd)
+  pwd=${pwd/#$HOME/\~}
+  sed 's:\([^/]\)[^/]*/:\1/:g' <<<"$pwd"
+}
+
+# enable ~/.config
+if [ "$XDG_CONFIG_HOME" = "" ]; then
+  export XDG_CONFIG_HOME="$HOME/.config"
+fi
+
+# simplify prompt
+export PS1='$(short_pwd)\$ '
+
+# aliases
+alias vim='nvim'
+alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/config"
+
+# enable development environments
+source ~/.cargo/env
+eval "$(nodenv init -)"
+eval "$(goenv init -)"
+eval "$(rbenv init -)"
+eval "$(pyenv init -)"
+eval "$(direnv hook bash)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
