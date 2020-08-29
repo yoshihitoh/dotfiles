@@ -1,10 +1,6 @@
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-function! s:config_path(path) abort
-  let abspath = resolve(expand('~/.config/nvim/' . a:path))
-endfunction
-
-let s:toml_path = resolve(expand('~/.config/nvim/' . 'dein.toml'))
+let s:toml_path = resolve(expand('~/.config/nvim/rc/' . 'dein.toml'))
 if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
 

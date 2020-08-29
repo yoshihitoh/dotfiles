@@ -1,0 +1,54 @@
+if &compatible
+  set nocompatible
+endif
+
+let s:is_windows = has('win32') || has('win64')
+
+function! IsWindows() abort
+  return s:is_windows
+endfunction
+
+function! s:source_rc(path, ...) abort
+  let use_global = get(a:000, 0, !has('vim_starting'))
+  let abspath = resolve(expand('~/.config/nvim/' . a:path))
+  if !use_global
+    execute 'source' fnameescape(abspath)
+    return
+  endif
+
+  " substitute all 'set' to 'setglobal'
+  let content = map(readfile(abspath),
+        \ 'substitute(v:val, "^\\W*\\zsset\\ze\\W", "setglobal", "")')
+  " create tempfile and source the tempfile
+  let tempfile = tempname()
+  try
+    call writefile(content, tempfile)
+    execute 'source' fnameescape(tempfile)
+  finally
+    if filereadable(tempfile)
+      call delete(tempfile)
+    endif
+  endtry
+endfunction
+
+if has('vim_starting') && &encoding !=# 'utf-8'
+  set encoding=utf-8
+endif
+
+call s:source_rc('rc/dein.vim')
+call s:source_rc('rc/edit.vim')
+call s:source_rc('rc/view.vim')
+call s:source_rc('rc/mapping.vim')
+
+" cache
+if IsWindows()
+  let $XDG_CACHE_HOME=$Temp
+endif
+
+let g:netrw_home=$XDG_CACHE_HOME.'/nvim'
+
+" runtiempath
+if IsWindows()
+else
+  set rtp+=/usr/local/opt/fzf
+endif
