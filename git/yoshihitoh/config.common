@@ -7,6 +7,7 @@
 	br = branch
 	ad = add
 	ap = add -p
+	sw = switch
 
 [merge]
 	tool = vimdiff
