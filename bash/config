@@ -15,13 +15,18 @@ export PS1='$(short_pwd)\$ '
 # aliases
 alias vim='nvim'
 alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/config"
+alias la='ls -la'
+alias ll='ls -l'
 
 # enable development environments
 source ~/.cargo/env
-eval "$(nodenv init -)"
-eval "$(goenv init -)"
-eval "$(rbenv init -)"
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(fnm env)"
 eval "$(pyenv init -)"
 eval "$(direnv hook bash)"
 
+# path
+export PATH=$HOME/bin:$PATH
+
+# fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
