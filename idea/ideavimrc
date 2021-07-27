@@ -18,6 +18,7 @@ nnoremap <Leader>br :action Run<CR>
 " Refactoring
 nnoremap <Leader>rf :action FindUsages<CR>
 nnoremap <Leader>rn :action RenameElement<CR>
+nnoremap <Leader>rc :action ReformatCode<CR>
 
 " Git
 nnoremap <Leader>ga :action Annotate<CR>
