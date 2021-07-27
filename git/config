@@ -1,3 +1,7 @@
 [include]
 	path = yoshihitoh/config.common
 	path = yoshihitoh/config.os
+[credentials]
+	helper = osxkeychain
+[credential]
+	helper = osxkeychain

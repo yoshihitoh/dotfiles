@@ -1,12 +1,18 @@
 [core]
-	editor = vim
+	editor = nvim
+# pager = delta --plus-color="#012800" --minus-color="#340001" --theme="Dracula"
+	pager = delta --color-only --theme OneHalfDark
 
 [alias]
-	st = status
-	co = checkout
-	br = branch
 	ad = add
 	ap = add -p
+	br = branch
+	co = checkout
+	st = status
+	sw = switch
+
+[interactive]
+	diffFilter = delta --color-only --theme OneHalfDark
 
 [merge]
 	tool = vimdiff
