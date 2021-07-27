@@ -2,10 +2,14 @@
 #-------------------------------------------------------------------------------
 # shell
 set -g default-shell /usr/local/bin/fish
+#set -g default-command "exec reattatch-to-user-namespace -l /usr/local/bin/fish"
 
 # window/pane
 set -g base-index 1
 setw -g pane-base-index 1
+
+# scroll buffer
+set -g history-limit 10000
 
 # mouse
 set -g mouse on
@@ -13,7 +17,7 @@ set -g mouse on
 # colors
 set -g default-terminal "screen-256color"
 
-# copy modes
+# mode
 setw -g mode-keys vi
 
 # disable delay
@@ -22,3 +26,8 @@ set -s escape-time 0
 # Bindings
 #-------------------------------------------------------------------------------
 bind -n C-k clear-history
+
+# copy
+bind-key -T copy-mode-vi v     send-keys -X begin-selection
+bind-key -T copy-mode-vi y     send-keys -X copy-pipe-and-cancel "reattatch-to-user-namespace pbcopy"
+bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "reattatch-to-user-namespace pbcopy"
