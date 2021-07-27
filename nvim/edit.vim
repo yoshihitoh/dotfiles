@@ -38,3 +38,14 @@ set nowritebackup
 set nobackup
 set noswapfile
 set backupdir-=.
+
+" C/C++ settings.
+set cindent
+set cinoptions=g-1
+
+" AutoCmd
+au BufNewFile,BufRead *.json    set tabstop=2 shiftwidth=2 expandtab
+au BufNewFile,BufRead *.rb      set tabstop=2 shiftwidth=2 expandtab
+au BufNewFile,BufRead *.scala   set tabstop=2 shiftwidth=2 expandtab
+au BufNewFile,BufRead *.yml     set tabstop=2 shiftwidth=2 expandtab
+au BufNewFile,BufRead *.yaml    set tabstop=2 shiftwidth=2 expandtab

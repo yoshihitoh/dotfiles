@@ -57,7 +57,7 @@ set nofoldenable
 " For conceal.
 set conceallevel=2 concealcursor=niv
 
-set colorcolumn=80
+set colorcolumn=120
 
 " Set background
 if !has('gui_running')
