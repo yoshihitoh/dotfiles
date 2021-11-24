@@ -22,6 +22,7 @@ alias ll='ls -l'
 source ~/.cargo/env
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(fnm env)"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(direnv hook bash)"
 
