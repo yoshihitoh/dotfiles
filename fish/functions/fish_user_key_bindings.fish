@@ -4,7 +4,4 @@ function fish_user_key_bindings
         fish_default_key_bindings -M $mode
     end
     fish_vi_key_bindings --no-erase
-
-    # fzf
-    fzf_key_bindings
 end
