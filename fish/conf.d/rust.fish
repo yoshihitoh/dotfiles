@@ -1,1 +1,1 @@
-source  ~/.cargo/env
+fish_add_path --path $HOME/.cargo/bin
