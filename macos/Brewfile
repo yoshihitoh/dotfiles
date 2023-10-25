@@ -1,0 +1,29 @@
+cask_args appdir: "/Applications"
+
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+
+brew "git"
+brew "jq"
+brew "lima"
+brew "neovim"
+brew "tmux"
+brew "fish"
+brew "zoxide"
+brew "direnv"
+brew "rtx"
+brew "tig"
+
+cask "font-source-code-pro"
+cask "font-source-code-pro-for-powerline"
+
+cask "alfred"
+cask "alt-tab"
+cask "rectangle"
+cask "firefox"
+cask "google-chrome"
+cask "kitty"
+cask "visual-studio-code"
+cask "notion"
+
