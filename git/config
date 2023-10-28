@@ -1,3 +1,5 @@
 [include]
 	path = yoshihitoh/config.common
-	path = yoshihitoh/config.os
+	path = yoshihitoh/config.os.macos
+	path = yoshihitoh/config.os.linux
+	path = yoshihitoh/config.os.windows

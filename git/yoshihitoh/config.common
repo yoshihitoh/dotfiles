@@ -1,7 +1,3 @@
-[user]
-	name = yoshihitoh
-	email = yoshihito.arih@gmail.com
-
 [core]
 	editor = nvim
 
@@ -15,3 +11,6 @@
 
 [merge]
 	tool = vimdiff
+
+[include]
+	path = config.user.private
