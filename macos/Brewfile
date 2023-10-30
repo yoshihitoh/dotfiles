@@ -4,6 +4,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 
+brew "bat"
 brew "direnv"
 brew "docker"
 brew "docker-compose"
