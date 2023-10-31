@@ -1,4 +1,6 @@
 function jenv_setup
-    jenv init - | source
-    jenv enable-plugin export 
+    if not test "$JENV_LOADED" = "1"
+        jenv init - | source
+        jenv enable-plugin export 
+    end
 end
