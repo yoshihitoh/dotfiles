@@ -5,10 +5,10 @@
         "revision": "73fe1415f01bc26ce4df0c4f52099ab1a0ef5b9d"
       },
       "homebrew/cask": {
-        "revision": "2c1e3900a755f0a07a9b0923e0f28b92f513301e"
+        "revision": "fb790828ac02fc8a5b0fb364cde795adb218a27c"
       },
       "homebrew/cask-fonts": {
-        "revision": "a6347d8ce45bf3de8107b1e049a0ad9ed7f34d64"
+        "revision": "59438ee340e93fc5251982179d32cc55cb7dc68d"
       }
     },
     "brew": {
@@ -965,7 +965,7 @@
         }
       },
       "notion": {
-        "version": "2.2.4",
+        "version": "2.3.1",
         "options": {
           "full_name": "notion",
           "args": {
@@ -992,7 +992,7 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.84.0",
+        "version": "1.84.1",
         "options": {
           "full_name": "visual-studio-code",
           "args": {
@@ -1071,13 +1071,22 @@
             "appdir": "/Applications"
           }
         }
+      },
+      "discord": {
+        "version": "0.0.283",
+        "options": {
+          "full_name": "discord",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
       }
     }
   },
   "system": {
     "macos": {
       "ventura": {
-        "HOMEBREW_VERSION": "4.1.18",
+        "HOMEBREW_VERSION": "4.1.19",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.0.0.0.1.1694021235",
