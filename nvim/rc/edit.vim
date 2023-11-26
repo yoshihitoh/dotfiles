@@ -38,3 +38,10 @@ set nowritebackup
 set nobackup
 set noswapfile
 set backupdir-=.
+
+" filetype based configurations
+augroup vimrc
+  autocmd Filetype terraform setlocal expandtab sts=2 sw=2 ts=2
+  autocmd Filetype tf setlocal expandtab sts=2 sw=2 ts=2
+  autocmd Filetype sh setlocal expandtab sts=2 sw=2 ts=2
+augroup END
