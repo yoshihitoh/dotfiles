@@ -5,7 +5,7 @@
         "revision": "d6fbeee54ba344be59731ff3e93fb105b2567e34"
       },
       "homebrew/cask": {
-        "revision": "f7c8555d25e680b4ef348889e977a13bf389e323"
+        "revision": "e8ba126a9228b3c342f4901603c0706872565831"
       },
       "homebrew/cask-fonts": {
         "revision": "558f919a38632feaed1f42e0201c5097ed60fae9"
@@ -1207,6 +1207,24 @@
         "version": "10.20.0",
         "options": {
           "full_name": "postman",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "krita": {
+        "version": "5.2.1",
+        "options": {
+          "full_name": "krita",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "skitch": {
+        "version": "2.9",
+        "options": {
+          "full_name": "skitch",
           "args": {
             "appdir": "/Applications"
           }
