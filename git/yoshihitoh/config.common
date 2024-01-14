@@ -11,6 +11,3 @@
 
 [merge]
 	tool = vimdiff
-
-[include]
-	path = config.user.private
