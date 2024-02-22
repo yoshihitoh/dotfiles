@@ -35,6 +35,9 @@ set_defaults() {
 
   # display battery level in the menu bar
   defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+  # put the Dock on the right side
+  defaults write com.apple.dock "orientation" -string "right" && killall Dock
 }
 
 main() {
