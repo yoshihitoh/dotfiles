@@ -5,7 +5,7 @@ color evening
 " Fonts
 " "-------------------------------------------------------------------------------
 set ambiwidth=double
-set guifont=SourceHanCodeJP-Medium:h13
+set guifont=SourceHanCodeJP-Medium:h13,"Source Han Code JP Medium:h13"
 
 " Menu
 " "-------------------------------------------------------------------------------
