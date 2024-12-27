@@ -5,6 +5,7 @@
 	st = status
 	co = checkout
 	br = branch
+	brc = branch --show-current
 	ad = add
 	ap = add -p
 	sw = switch
