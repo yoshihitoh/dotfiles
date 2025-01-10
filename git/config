@@ -1,5 +1,18 @@
-[include]
-	path = yoshihitoh/config.common
-	path = yoshihitoh/config.os.macos
-	path = yoshihitoh/config.os.linux
-	path = yoshihitoh/config.os.windows
+[user]
+	name = yoshihitoh
+	email = yoshihito.arih@gmail.com
+
+[core]
+	editor = nvim
+
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	brc = branch --show-current
+	ad = add
+	ap = add -p
+	sw = switch
+
+[merge]
+	tool = nvimdiff
