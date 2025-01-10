@@ -6,3 +6,5 @@ set -g fish_theme bobthefish
 set -g theme_color_scheme dark
 
 set -gx EDITOR nvim
+
+fish_add_path --prepend --path /opt/homebrew/bin
