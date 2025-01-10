@@ -11,4 +11,4 @@
 	sw = switch
 
 [merge]
-	tool = vimdiff
+	tool = nvimdiff
