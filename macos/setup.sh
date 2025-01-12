@@ -11,6 +11,14 @@ brew_install() {
   brew bundle --global
 }
 
+manual_install() {
+  # rustup: Homebrew's rustup can be problematic, so install it manually instead.
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -sSf | sh -s -- -y
+
+  # Roetta2
+  /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+}
+
 # reference: https://macos-defaults.com/
 set_defaults() {
   # screenshot
@@ -42,6 +50,7 @@ set_defaults() {
 
 main() {
   brew_install
+  manual_install
   set_defaults
 }
 
