@@ -5,7 +5,12 @@ set -euo pipefail
 SCRIPT_DIR="$(cd $(dirname $0); pwd)"
 
 make_symlink() {
-  ln -s "$SCRIPT_DIR" "$HOME/.config/git"
+  local config_dir
+  config_dir="$HOME/.config/git"
+
+  if [ ! -e "$config_dir" ]; then
+    ln -s "$SCRIPT_DIR" "$config_dir"
+  fi
 }
 
 main() {
