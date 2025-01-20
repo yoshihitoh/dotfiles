@@ -19,3 +19,6 @@
 
 [includeIf "gitdir:~/workspace/work/"]
     path = ~/.config/git/config.work
+
+[include]
+    path = ~/.config/git/config.local
