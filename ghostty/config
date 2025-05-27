@@ -1,0 +1,9 @@
+shell-integration = fish
+
+window-width = 160
+window-height = 40
+
+font-family = "Source Code Pro Medium for Powerline"
+font-size = 14
+font-feature = -calt
+font-feature = -dlig
